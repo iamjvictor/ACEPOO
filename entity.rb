@@ -3,6 +3,10 @@ module Classes
     class Atividade
         #Definindo tributos
         attr_accessor :name, :hour, :category
+
+        def category
+            @category
+        end
         
         #metodo para o calculo de horas totais, todas as categorias tem no máximo 200h
         #horasTotais deveria vir do banco de dados, quando ele receber o nome do aluno e fizer a busca
@@ -19,17 +23,17 @@ module Classes
      
     end
 
-    #Todas são subClasses de Atividade herdando seus atributos e metodos
+    #Todas são subClasses de Atividade herdando seus atributos e metodosS
     class ACE1 < Atividade
-        @category = 'ACE1'
+       
     end
 
     class ACE2 < Atividade
-        @category = 'ACE2'
+        
     end
 
     class ACE3 < Atividade
-        @category = 'ACE3'
+        
     end
 
 

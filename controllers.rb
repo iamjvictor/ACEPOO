@@ -15,7 +15,7 @@ module Functions
         case atv
         when 1
             ACE1(name)
-            
+
         when 2
             ACE2(name)
         when 3
@@ -32,17 +32,23 @@ module Functions
         x.name = name
         puts 'Quantas horas possui a atividade ?'
         x.hour= gets.chomp.to_i
+        #Faltaria uma função para enviar para o banco de dados, passando essas informações como parametros
+        #Faltaria uma função que recebesse as horas acumuladas do aluno do banco de dados e realizaria o metodo de CalculaHora
     end
     def ACE2(name)
         x = ACE2.new
         x.name = name
         puts 'Quantas horas possui a atividade ?'
         x.hour= gets.chomp.to_i
+        #Faltaria uma função para enviar para o banco de dados, passando essas informações como parametros
+        #Faltaria uma função que recebesse as horas acumuladas do aluno do banco de dados e realizaria o metodo de CalculaHora
     end
     def ACE3(name)
         x = ACE3.new
         x.name = name
         puts 'Quantas horas possui a atividade ?'
         x.hour= gets.chomp.to_i
+        #Faltaria uma função para enviar para o banco de dados, passando essas informações como parametros
+        #Faltaria uma função que recebesse as horas acumuladas do aluno do banco de dados e realizaria o metodo de CalculaHora
     end
 end

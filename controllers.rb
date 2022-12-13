@@ -36,12 +36,41 @@ module Functions
         x = ACE1.new
         x.category = 'ACE1'
         x.name = name
-        puts 'Quantas horas possui a atividade ?'
-        x.hour= gets.chomp.to_i
+        
+        ACE1A(x)
+        
         
         #Faltaria uma função para enviar para o banco de dados, passando essas informações como parametros
         #Faltaria uma função que recebesse as horas acumuladas do aluno do banco de dados e realizaria o metodo de CalculaHora
+        #calculaHora(horasAcumuladas, x.hour, x,horaMaxima)
     end
+
+    # Função para definir sub categoria, assim buscando no banco de dados pela sub categoria chamaria a função calcula hora de acordo com a hora máxima da subCategoria.
+
+    def ACE1A(x)
+        puts 'selecione o tipo de atividade: '
+        puts '1- Participação em atividades de extensão ligadas a projetos e programas de extensão integrados à matriz curricular dos cursos, como bolsista de extensão ou voluntário aprovados em editais da PROEX.'
+        puts '2-Participação em atividades de extensão ligadas a projetos isolados ou sob demanda cadastrados na PROEX.'
+        t = gets.chomp.to_i
+
+        case t
+        when 1
+            x.subCategory = extensão
+            x.hour = 100
+            x.horaMaxima = 200
+            
+        when 2
+            x.subCategory = Demanda
+            x.hour = 50
+            x.horaMaxima = 100
+        else
+            ACE1A()
+        end
+
+        
+
+    end
+
     def ACE2(name)
         x = ACE2.new
         x.category = 'ACE2'
